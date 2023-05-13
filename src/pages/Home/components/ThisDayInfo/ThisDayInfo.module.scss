@@ -1,0 +1,29 @@
+.items {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  row-gap: 56px;
+  justify-content: space-between;
+  border-radius: 20px;
+  border: 1px solid #e0e5ec;
+  padding: 40px;
+  margin-bottom: 46px;
+  background: linear-gradient(#d3d9e8, #d3d9e8) no-repeat center/1px 100% #fff;
+}
+.item {
+  display: flex;
+}
+.indicator {
+  display: flex;
+  align-items: center;
+  margin-right: 10px;
+  &__name {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 25px;
+  }
+  &__value {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 18px;
+  }
+}

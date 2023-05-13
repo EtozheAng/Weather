@@ -1,0 +1,21 @@
+.rainfall {
+  display: flex;
+  justify-content: space-between;
+  background: #d3d9e8;
+  border: 1px solid #d3d9e8;
+  box-shadow: 0px 4px 8px rgba(176, 188, 222, 0.8);
+  border-radius: 20px;
+  padding: 23px 40px;
+  &__item {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 150%;
+    letter-spacing: 0.02em;
+    span {
+      font-weight: 700;
+    }
+  }
+  &__item:last-child {
+    text-align: end;
+  }
+}

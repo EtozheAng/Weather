@@ -1,0 +1,25 @@
+.container {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+.temperature__bg {
+  position: relative;
+  margin-top: 127px;
+  max-height: 380px;
+  height: 380px;
+  background-image: url(image/image.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.temperature__now {
+  position: absolute;
+  bottom: 77px;
+  left: 85px;
+  font-family: 'Source Sans Pro';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 112px;
+  line-height: 141px;
+  color: #020419;
+}

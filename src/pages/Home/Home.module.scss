@@ -1,0 +1,14 @@
+.wrapper {
+  display: grid;
+  grid-template-columns: 456px auto;
+  gap: 65px;
+}
+.days {
+  display: grid;
+  padding: 20px 52px 23px;
+  background-color: #fff;
+  border-radius: 20px;
+}
+.info {
+  display: grid;
+}

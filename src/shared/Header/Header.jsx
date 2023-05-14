@@ -1,13 +1,18 @@
 import GlobalSvgSelector from '../../assets/icon/global/GlobalSvgSelector'
 import s from './Header.module.scss'
+import { useTheme } from '../../hooks/useTheme'
 const Header = () => {
+  const theme = useTheme()
+  function changeTheme() {
+    theme.changeTheme(theme.theme === 'light' ? 'dark' : 'light')
+  }
   return (
     <header className={s.header}>
       <div className={s.wrapper}>
         <div className={s.title}>Погода</div>
       </div>
       <div className={s.wrapper}>
-        <div className={s.change_theme}>
+        <div className={s.change_theme} onClick={changeTheme}>
           <GlobalSvgSelector id="change-theme" />
         </div>
         <div className={s.input_icons}>

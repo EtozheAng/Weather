@@ -1,13 +1,16 @@
+@import '../../../../styles/variables.scss';
 .items {
   display: grid;
   grid-template-columns: repeat(2, auto);
   row-gap: 56px;
   justify-content: space-between;
   border-radius: 20px;
-  border: 1px solid #e0e5ec;
+  border: 1px solid $bg-light;
+
   padding: 40px;
   margin-bottom: 46px;
-  background: linear-gradient(#d3d9e8, #d3d9e8) no-repeat center/1px 100% #fff;
+  background: linear-gradient($border, $border) no-repeat center/1px 100%
+    #f4f4f4;
 }
 .item {
   display: flex;

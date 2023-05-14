@@ -1,1 +1,47 @@
 $color-font: #020419;
+$bg-light: #e0e5ec;
+$border: #d3d9e8;
+
+$body-background-dark: #020419;
+$body-background-light: #e0e5ec;
+
+$components-background-dark: #5091ba;
+$components-background-light: #d3d9e8;
+
+$shadow-background-dark: #3a6c8c;
+$shadow-background-light: rgba(176, 188, 222, 0.8);
+
+$color-dark: #fff;
+$color-light: #020419;
+
+$img-background-dark: url('../assets/images/This-night-bg.png');
+$img-background-light: url('../assets/images/This-day-bg.png');
+
+$input-color-dark: #fff;
+$input-color-light: #97a1bc;
+
+:root {
+  --body-background-dark: #{$body-background-dark};
+  --body-background-light: #{$body-background-light};
+  --body-background-default: #{var(--body-background-light)};
+
+  --components-background-dark: #{$components-background-dark};
+  --components-background-light: #{$components-background-light};
+  --components-background-default: #{var(--components-background-light)};
+
+  --shadow-background-dark: #{$shadow-background-dark};
+  --shadow-background-light: #{$shadow-background-light};
+  --shadow-background-default: #{var(--shadow-background-light)};
+
+  --color-dark: #{$color-dark};
+  --color-light: #{$color-light};
+  --color-default: #{var(--color-light)};
+
+  --img-background-dark: #{$img-background-dark};
+  --img-background-light: #{$img-background-light};
+  --img-background-default: #{var(--img-background-light)};
+
+  --input-color-dark: #{$input-color-dark};
+  --input-color-light: #{$input-color-light};
+  --input-color-default: #{var(--input-color-light)};
+}

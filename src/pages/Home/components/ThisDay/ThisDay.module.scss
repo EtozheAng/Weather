@@ -4,7 +4,7 @@
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
-    background-image: url('../../../../assets/images/This-day-bg.png');
+    background-image: var(#{--img-background-default});
     background-repeat: no-repeat;
     padding: 125px 85px 48px;
     margin-bottom: 40px;
@@ -13,23 +13,28 @@
     font-weight: 300;
     font-size: 112px;
     line-height: 112px;
-    color: $color-font;
+    color: var(#{--color-default});
   }
   &__time {
     font-weight: 700;
     margin-right: 50px;
     font-size: 32px;
     line-height: 40px;
-    color: $color-font;
+    color: var(#{--color-default});
   }
   &__city,
   &__data {
     font-weight: 400;
     font-size: 28px;
     line-height: 35px;
-    color: $color-font;
+    color: var(#{--color-default});
   }
   &__icon {
     margin-left: 12px;
+    svg {
+      path {
+        stroke: var(#{--color-default});
+      }
+    }
   }
 }

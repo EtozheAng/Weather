@@ -13,13 +13,14 @@
   font-weight: 700;
   font-size: 32px;
   line-height: 40px;
-  color: #2e3f58;
+  color: #{var(--color-default)};
 }
 .search {
   width: 100%;
   border: none;
   outline: none;
   background-color: inherit;
+  color: inherit;
   &::placeholder {
     font-size: 16px;
     line-height: 20px;
@@ -30,8 +31,8 @@
   align-items: center;
   width: 100%;
   font-size: 16px;
-  color: #707b99;
-  border: 1px solid #97a1bc;
+  color: var(#{--color-default});
+  border: 1px solid var(#{--input-color-default});
   border-radius: 8px;
   height: 45px;
   max-width: 340px;
@@ -40,6 +41,9 @@
 }
 .change_theme {
   margin-right: 10px;
+  svg {
+    stroke: var(#{--color-default});
+  }
 }
 .search_icon {
   display: flex;

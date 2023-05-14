@@ -10,7 +10,7 @@
 }
 body {
   font-family: 'Source Sans Pro', sans-serif;
-  background-color: #e0e5ec;
+  background: var(#{--body-background-default});
   color: #020419;
 }
 .container {

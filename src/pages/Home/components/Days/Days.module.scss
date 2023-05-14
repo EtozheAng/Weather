@@ -1,15 +1,17 @@
+@import '../../../../styles/variables.scss';
+
 .items {
   grid-template-columns: repeat(7, 1fr);
   display: grid;
   align-items: end;
   justify-items: center;
-  background-color: #fff;
+  background-color: #f4f4f4;
   border-radius: 20px;
   margin-top: 15px;
 }
 .card {
   padding: 0 25px;
-  border-left: 1px solid #d3d9e8;
+  border-left: 1px solid $border;
   &:first-child {
     border: none;
     padding-left: 0;

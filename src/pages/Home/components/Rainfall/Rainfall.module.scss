@@ -19,4 +19,10 @@
   &__item:last-child {
     text-align: end;
   }
+  @media (max-width: 475px) {
+    padding: 23px 20px;
+    &__item {
+      font-size: 14px;
+    }
+  }
 }

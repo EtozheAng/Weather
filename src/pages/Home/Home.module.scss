@@ -1,14 +1,34 @@
 .wrapper {
   display: grid;
-  grid-template-columns: 456px auto;
+  grid-template-columns: repeat(2, 1fr);
   gap: 65px;
+  @media (max-width: 1300px) {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  @media (max-width: 768px) {
+    gap: 35px;
+  }
 }
 .days {
   display: grid;
+  max-width: 770px;
   padding: 20px 52px 23px;
   background-color: #f4f4f4;
   border-radius: 20px;
-}
-.info {
-  display: grid;
+  @media (max-width: 1300px) {
+    max-width: none;
+    overflow-x: auto;
+    &::-webkit-scrollbar {
+      width: 0;
+    }
+  }
+  @media (max-width: 768px) {
+    canvas {
+      display: none !important;
+      margin-top: 10px;
+    }
+  }
+  @media (max-width: 425px) {
+    padding: 20px;
+  }
 }

@@ -6,7 +6,9 @@
     align-items: flex-end;
     background-image: var(#{--img-background-default});
     background-repeat: no-repeat;
-    padding: 125px 85px 48px;
+    background-size: cover;
+    background-position: center;
+    padding: 125px 85px 55px;
     margin-bottom: 40px;
   }
   &__temp {
@@ -16,14 +18,15 @@
     color: var(#{--color-default});
   }
   &__time {
+    display: flex;
+    justify-content: flex-end;
     font-weight: 700;
-    margin-right: 50px;
     font-size: 32px;
     line-height: 40px;
     color: var(#{--color-default});
   }
   &__city,
-  &__data {
+  &__date {
     font-weight: 400;
     font-size: 28px;
     line-height: 35px;
@@ -32,9 +35,61 @@
   &__icon {
     margin-left: 12px;
     svg {
+      width: 60px;
+      height: 60px;
       path {
         stroke: var(#{--color-default});
+        stroke-width: 1;
       }
+    }
+  }
+  @media (max-width: 992px) {
+    &__day {
+      padding: 110px 60px 55px;
+    }
+    &__time,
+    &__date {
+      font-size: 25px;
+      line-height: 30px;
+    }
+    &__temp {
+      font-size: 100px;
+      line-height: 100px;
+    }
+    &__icon {
+      margin-left: 12px;
+      svg {
+        width: 50px;
+        height: 50px;
+      }
+    }
+  }
+  @media (max-width: 576px) {
+    &__day {
+      flex-direction: column;
+      padding: 45px 30px 55px;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+    &__item {
+      display: flex;
+      flex-direction: row-reverse;
+    }
+    &__date {
+      max-width: 110px;
+    }
+    &__temp_wrap {
+      display: grid;
+      margin-bottom: 15px;
+    }
+    &__city {
+      grid-area: 2 / 2 / 3 / 3;
+    }
+  }
+  @media (max-width: 375px) {
+    &__date {
+      font-size: 20px;
+      line-height: 22px;
     }
   }
 }

@@ -8,6 +8,9 @@
   background-color: #f4f4f4;
   border-radius: 20px;
   margin-top: 15px;
+  @media (max-width: 425px) {
+    margin: 0;
+  }
 }
 .card {
   padding: 0 25px;

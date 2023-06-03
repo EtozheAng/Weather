@@ -9,7 +9,9 @@ import {
   Filler,
   Legend,
 } from 'chart.js'
+import moment from 'moment'
 import { Line } from 'react-chartjs-2'
+import { useSelector } from 'react-redux'
 
 ChartJS.register(
   CategoryScale,
@@ -23,47 +25,53 @@ ChartJS.register(
 )
 
 export default function Chart() {
+  const { weather } = useSelector((state) => state.currentWeatherSliceReducer)
+  const {
+    time,
+    temperature_2m_max,
+    precipitation_probability_max,
+    windspeed_10m_max,
+  } = weather.daily
+
   const options = {
     responsive: true,
+    interaction: {
+      intersect: false,
+      mode: 'index',
+    },
     plugins: {
       legend: {
-        display: false,
-      },
-    },
-    scales: {
-      y: {
-        suggestedMin: 0,
-        suggestedMax: 30,
+        display: true,
       },
     },
   }
-  const labels = [
-    '00:00',
-    '01:00',
-    '02:00',
-    '03:00',
-    '04:00',
-    '05:00',
-    '06:00',
-    '07:00',
-    '08:00',
-    '09:00',
-    '10:00',
-    '11:00',
-    '12:00',
-  ]
+
   const data = {
-    labels,
+    labels: time?.map((time) => moment(time).format('D MMM')),
     datasets: [
       {
-        label: 'Температура ',
-        data: [12, 13, 13, 14, 15, 16, 14, 15, 16, 15, 17, 17, 18],
+        label: 'Температура, °C',
+        data: temperature_2m_max,
+        borderColor: '#f66049',
+        backgroundColor: '#f66049',
+        tension: 0.5,
+      },
+      {
+        label: 'Вероятность осадков, %',
+        data: precipitation_probability_max,
         borderColor: '#66afeb',
         backgroundColor: '#66afeb',
+        tension: 0.5,
+      },
+      {
+        label: 'Ветер, км/ч',
+        data: windspeed_10m_max,
+        borderColor: '#5e55ed',
+        backgroundColor: '#5e55ed',
         tension: 0.5,
       },
     ],
   }
 
-  return <Line width={675} options={options} data={data} />
+  return <Line width={675} height={210} options={options} data={data} />
 }

@@ -24,7 +24,7 @@ const initialState = {
     status: 0,
     message: '',
   },
-  city: 'Tula',
+  city: 'Тула',
 }
 
 export const currentWeatherSlice = createSlice({

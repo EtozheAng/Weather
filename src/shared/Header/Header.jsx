@@ -3,7 +3,7 @@ import s from './Header.module.scss'
 import { useTheme } from '../../hooks/useTheme'
 import { createRef } from 'react'
 import { useDispatch } from 'react-redux'
-import { currentWeatherSlice } from '../../store/slices/currentWeatherSlice'
+import { fetchCurrentCity } from '../../store/thunks/fetchCurrentCity'
 const Header = () => {
   const theme = useTheme()
   function changeTheme() {
@@ -13,7 +13,7 @@ const Header = () => {
   const dispatch = useDispatch()
   function getCity() {
     const nameCity = cityRef.current.value
-    dispatch(currentWeatherSlice.actions.fetchCurrentCity(nameCity.trim()))
+    dispatch(fetchCurrentCity(encodeURIComponent(nameCity.trim())))
   }
 
   return (

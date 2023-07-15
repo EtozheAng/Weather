@@ -28,7 +28,7 @@ const Header = () => {
         <div className={s.input_icons}>
           <input
             type="text"
-            placeholder="Enter city name"
+            placeholder="Город"
             className={s.search}
             ref={cityRef}
             required
